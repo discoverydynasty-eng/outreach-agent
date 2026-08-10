@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.fadbranding.hvacsummary</string>
+
+  <!-- EDIT this path to your real folder + venv python. -->
+  <key>ProgramArguments</key>
+  <array>
+    <string>/Users/YOURNAME/hvac-outreach/venv/bin/python</string>
+    <string>/Users/YOURNAME/hvac-outreach/weekly_summary.py</string>
+  </array>
+
+  <!-- Every Monday at 8:30am (Weekday 1 = Monday). Runs at next wake if asleep. -->
+  <key>StartCalendarInterval</key>
+  <dict>
+    <key>Weekday</key>
+    <integer>1</integer>
+    <key>Hour</key>
+    <integer>8</integer>
+    <key>Minute</key>
+    <integer>30</integer>
+  </dict>
+
+  <key>StandardOutPath</key>
+  <string>/Users/YOURNAME/hvac-outreach/logs/summary.out.log</string>
+  <key>StandardErrorPath</key>
+  <string>/Users/YOURNAME/hvac-outreach/logs/summary.err.log</string>
+
+  <key>RunAtLoad</key>
+  <false/>
+</dict>
+</plist>

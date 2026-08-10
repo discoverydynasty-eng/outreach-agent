@@ -1,0 +1,26 @@
+# Secrets - never commit
+.env
+
+# Real business contact data / PII (send_log, leads, follow-up state, dedup caches, etc)
+# config.json also excluded: it carries a real sender email + physical mailing address.
+*.json
+tracker.csv
+run_summary.txt
+
+# Agent scratch. The unattended daily drafting run writes throwaway helper scripts
+# (_build_outbox_<date>.py, _sweep_<date>.py ...), scraped source documents (DOB licence
+# PDFs, raw lead dumps) and leads.json backups straight into the project directory. These
+# contain REAL LEAD DATA, and *.json above does not catch ".bak"/".pdf"/".txt" variants -
+# so exclude the whole prefix and those extensions explicitly.
+_*
+!_mac_reference/
+!_build_outbox.py
+!_validate_outbox.py
+*.bak
+*.pdf
+
+# Generated / transient
+__pycache__/
+venv/
+logs/
+.run.lock

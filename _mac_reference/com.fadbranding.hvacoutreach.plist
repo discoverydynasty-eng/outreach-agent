@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.fadbranding.hvacoutreach</string>
+
+  <!-- What to run. EDIT this path to your real folder. -->
+  <key>ProgramArguments</key>
+  <array>
+    <string>/Users/YOURNAME/hvac-outreach/daily_run.sh</string>
+  </array>
+
+  <!-- Run every day at 8:05am. If the Mac is asleep at 8:05, launchd runs it
+       once as soon as the Mac wakes (this is the advantage over cron). -->
+  <key>StartCalendarInterval</key>
+  <dict>
+    <key>Hour</key>
+    <integer>8</integer>
+    <key>Minute</key>
+    <integer>5</integer>
+  </dict>
+
+  <key>StandardOutPath</key>
+  <string>/Users/YOURNAME/hvac-outreach/logs/launchd.out.log</string>
+  <key>StandardErrorPath</key>
+  <string>/Users/YOURNAME/hvac-outreach/logs/launchd.err.log</string>
+
+  <key>RunAtLoad</key>
+  <false/>
+</dict>
+</plist>
