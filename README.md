@@ -1,11 +1,11 @@
-# Outreach agent
+﻿# Outreach agent
 
 Autonomous daily cold-email agent for small owner-run local-service businesses in the New
 York area, run for Fad Branding.
 
-Despite the repo name it is no longer HVAC only. The pool now covers electricians,
-plumbing, roofing, gutter work, water/mould/fire damage restoration, tree removal and
-garage-door service. Same model and the same five problem angles apply to any local trade.
+It started as HVAC only. The pool now covers electricians, plumbing, roofing, gutter
+work, water/mould/fire damage restoration, tree removal and garage-door service. Same
+model and the same five problem angles apply to any local trade.
 
 **Full operating manual: [`SYSTEM.md`](SYSTEM.md). Agent instructions:
 [`CLAUDE.md`](CLAUDE.md). Windows install: [`SETUP_WINDOWS.md`](SETUP_WINDOWS.md).** This
